@@ -20,17 +20,17 @@ require_once('Views/Components/Header.php');
             </tr>
         </thead>
         <tbody>
-        <?php
+            <?php
 
-        foreach ($db->query('SELECT * FROM Items') as $item) {
-            echo "<tr>";
-            echo "    <td>$item[id]</td>";
-            echo "    <td>$item[name]</td>";
-            echo "    <td>$item[price]</td>";
-            echo "</tr>";
-        }
+            foreach ($db->query('SELECT * FROM Items') as $item) {
+                echo "<tr>";
+                echo "    <td>$item[id]</td>";
+                echo "    <td>$item[name]</td>";
+                echo "    <td>$item[price]</td>";
+                echo "</tr>";
+            }
 
-        ?>
+            ?>
         </tbody>
     </table>
 </main>

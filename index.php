@@ -43,6 +43,13 @@ switch ($requestMethod) {
                 require_once('Views/Home.php');
             } break;
 
+            case 'view-item': {
+                /**
+                 * Display the single-item view.
+                 */
+                require_once('Views/Item.php');
+            } break;
+
             case 'view-items': {
                 /**
                  * Display the master items list.
