@@ -35,7 +35,10 @@ function initializeDatabaseConnection() : \PDO {
     $db = null;
 
     try {
-        $db = new \PDO("mysql:host=${DATABASE_HOST};dbname=${DATABASE_NAME};charset=utf8", DATABASE_USER, DATABASE_PASS);
+        $host = DATABASE_HOST;
+        $name = DATABASE_NAME;
+
+        $db = new \PDO("mysql:host=$host;dbname=$name;charset=utf8", DATABASE_USER, DATABASE_PASS);
     } catch (\PDOException $pdoException) {
         die($pdoException->getMessage());
     }
