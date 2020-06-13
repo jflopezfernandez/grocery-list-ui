@@ -1,8 +1,19 @@
 
 html, body {
     height: 100%;
+    font-family: 'Montserrat', sans-serif;
 }
 
 main {
     min-height: 100%;
+    width: 10%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+}
+
+.nav-link {
+    font-size: 1.5rem;
 }

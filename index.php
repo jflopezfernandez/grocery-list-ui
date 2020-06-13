@@ -27,14 +27,37 @@ switch ($requestMethod) {
          */
         header("Location: http://freebib.org/\n");
         exit();
-    } break;
+    } break; // POST Request Switch
 
     case 'GET': {
         /**
-         * Display the main page.
+         * Parse the GET request's parameters, if any.
          */
-        require_once('Views/Home.php');
-    } break;
+        $action = filter_input(INPUT_GET, 'action', FILTER_SANITIZE_STRING);
+
+        switch ($action) {
+            case 'create-list': {
+                /**
+                 * @todo Display the list creation page.
+                 */
+                require_once('Views/Home.php');
+            } break;
+
+            case 'view-items': {
+                /**
+                 * Display the master items list.
+                 */
+                require_once('Views/Items.php');
+            } break;
+
+            default: {
+                /**
+                 * Display the main page.
+                 */
+                require_once('Views/Home.php');
+            } break;
+        } // Action Switch
+    } break; // GET Request Switch
 
     default: {
         // TODO:
