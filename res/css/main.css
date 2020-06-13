@@ -6,12 +6,20 @@ html, body {
 
 main {
     min-height: 90%;
-    width: 10%;
+    width: 40%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     margin: auto;
+}
+
+table {
+    text-align: center;
+}
+
+td {
+    padding: 3px 15px 2px 15px;
 }
 
 .nav-link {
