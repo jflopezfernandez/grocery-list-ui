@@ -25,7 +25,7 @@ require_once('Views/Components/Header.php');
             foreach ($db->query('SELECT * FROM Items') as $item) {
                 echo "<tr>";
                 echo "    <td>$item[id]</td>";
-                echo "    <td>$item[name]</td>";
+                echo "    <td><a href=\"/?action=view-item&item-id=$item[id]\">$item[name]</a></td>";
                 echo "    <td>$item[price]</td>";
                 echo "</tr>";
             }

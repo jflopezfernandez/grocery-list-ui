@@ -19,6 +19,7 @@ $create_new = ($item_id) ? false : true;
 
 ?>
 <main>
+    <a href="/?action=view-items">Item List</a>
     <p>Item ID: <?= $item_id ?></p>
     <p>Creating new item? <?= $create_new ?></p>
 </main>
